@@ -15,14 +15,15 @@ app.use(express.urlencoded({extended:true}))
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.json());
-
-
 let corsOptions = {
-  origin : ['http://localhost:5173', 'https://workout-client-mauve.vercel.app/']
+  origin : ['http://localhost:5173', 'https://workout-client-mauve.vercel.app']
 }
 
 app.use(cors(corsOptions))
+
+app.use(express.json());
+
+
 
 app.get("/", (request, response) => {
   console.log(request);
