@@ -72,6 +72,7 @@ router.delete('/:id', async(request,response) => {
  if(!result){
   return response.status(404).send({message: 'Workout not found'});
  }
+ console.log(error)
  return response.status(200).send({message: 'Workout deleted successfully'});
   } catch (error) {
     console.log(error.message);

@@ -19,7 +19,7 @@ app.use(express.json());
 
 
 let corsOptions = {
-  origin : ['http://localhost:5173', 'https://workout-client-s7mn.vercel.app/']
+  origin : ['http://localhost:5173']
 }
 
 app.use(cors(corsOptions))
